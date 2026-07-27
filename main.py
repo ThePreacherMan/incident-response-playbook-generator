@@ -1,1 +1,17 @@
-Project file created.
+"""Main entry point for the Incident Response Playbook Generator."""
+
+import sys
+from pathlib import Path
+
+
+PROJECT_ROOT = Path(__file__).resolve().parent
+SOURCE_DIRECTORY = PROJECT_ROOT / "src"
+
+if str(SOURCE_DIRECTORY) not in sys.path:
+    sys.path.insert(0, str(SOURCE_DIRECTORY))
+
+from playbook_generator.cli import run_cli
+
+
+if __name__ == "__main__":
+    raise SystemExit(run_cli())
