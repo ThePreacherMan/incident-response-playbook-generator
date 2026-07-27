@@ -1,1 +1,1 @@
-Project file created.
+"""Automated tests for the Incident Response Playbook Generator."""
